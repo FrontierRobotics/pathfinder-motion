@@ -10,17 +10,26 @@ fun main(args: Array<String>) {
     val bus = I2CFactory.getInstance(I2CBus.BUS_1)
     println("Connected to bus")
 
-    val arduino = bus.getDevice(0x08)
+    val arduino = bus.getDevice(0x1A)
     println("Connected to device")
 
-    sendAndReceive(arduino, 0x02)
+    blink(arduino)
+
+    blink(arduino)
+
+    readData(arduino)
 }
 
-fun sendAndReceive(device: I2CDevice, command: Byte) {
-    device.write(command)
-    Thread.sleep(500)
+fun blink(device: I2CDevice) {
+    device.write(0x02)
+}
 
-    printResult(command, device.read().toByte());
+fun readData(device: I2CDevice) {
+    val buffer = byteArrayOf(0, 0, 0, 0, 0, 0)
+
+    device.read(buffer, 0, 6)
+
+    println(String(buffer))
 }
 
 fun printResult(sent: Byte, received: Byte) {
