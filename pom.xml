@@ -10,7 +10,7 @@
 
     <properties>
         <kotlin.version>1.0.0-rc-1036</kotlin.version>
-        <main.class>net.pathfinder.motion.api.Main.kt</main.class>
+        <main.class>net.pathfinder.motion.api.MainKt</main.class>
     </properties>
 
     <dependencies>
