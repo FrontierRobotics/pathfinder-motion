@@ -3,14 +3,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.andycondon</groupId>
+    <groupId>io.frontierrobotics</groupId>
     <artifactId>pathfinder-motion</artifactId>
     <version>0.1.0</version>
     <name>Pathfinder Motion</name>
 
     <properties>
         <kotlin.version>1.0.1-2</kotlin.version>
-        <main.class>net.pathfinder.motion.api.MainKt</main.class>
+        <main.class>io.frontierrobotics.pathfinder.motion.MainKt</main.class>
     </properties>
 
     <dependencies>
