@@ -6,7 +6,7 @@
     <groupId>com.github.andycondon</groupId>
     <artifactId>pathfinder-motion</artifactId>
     <version>0.1.0</version>
-    <name>Motion Service</name>
+    <name>Pathfinder Motion</name>
 
     <properties>
         <kotlin.version>1.0.1-2</kotlin.version>
