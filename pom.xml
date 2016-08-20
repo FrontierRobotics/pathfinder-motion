@@ -9,7 +9,7 @@
     <name>Pathfinder Motion</name>
 
     <properties>
-        <kotlin.version>1.0.2</kotlin.version>
+        <kotlin.version>1.0.3</kotlin.version>
         <main.class>io.frontierrobotics.pathfinder.motion.MainKt</main.class>
     </properties>
 
@@ -30,11 +30,16 @@
             <version>0.1.195</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-test</artifactId>
+            <version>${kotlin.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
-        <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
-        <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
+        <sourceDirectory>src/main/kotlin</sourceDirectory>
 
         <plugins>
             <plugin>
@@ -45,6 +50,7 @@
                 <executions>
                     <execution>
                         <id>compile</id>
+                        <phase>compile</phase>
                         <goals>
                             <goal>compile</goal>
                         </goals>
@@ -52,6 +58,7 @@
 
                     <execution>
                         <id>test-compile</id>
+                        <phase>test-compile</phase>
                         <goals>
                             <goal>test-compile</goal>
                         </goals>
